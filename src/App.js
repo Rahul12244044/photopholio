@@ -1,5 +1,4 @@
-// import logo from './logo.svg';
-// import './App.css';
+
 import {useState} from "react";
 import PhotoFolio from "./components/photofolio.js";
 import AddAlbum from "./components/addAlbums.js";
@@ -44,11 +43,11 @@ function App() {
     setAlbumName(nameAlbum);
     setShowOneAlbum(true);
     setShowAllAlbums(false);
-    // setShowAddAlbum(false);
+    
   }
   const addAlbum=async (name)=>{
     console.log("addAlbum");
-    // console.log(totalName);
+   
     
     console.log("allAlbums");
     console.log(name);
@@ -145,12 +144,7 @@ const updateAllImage=async (updateImage,index,allImageIndex,isSearch,searchImage
   console.log("updateAllImages");
   console.log(updateImage);
   console.log(index);
-  // allImages[index]=updateImage;
   if(isSearch){
-  // let dupAllImages=allImages;
-  // dupAllImages[index]=updateImage;
-  // setAllImages(dupAllImages);
-  // allImages[allImageIndex]=updateImage;
   const dupAllImages=searchImage.map((elm)=>elm);
   dupAllImages[index]=updateImage;
   setSearchImages(dupAllImages);
@@ -176,11 +170,6 @@ const deleteImage=async (searchIndex,allImageIndex,isSearch,imageId,albumName)=>
     const allNewImages=allImages.filter((elm,index)=>index!=allImageIndex);
     setAllImages(allNewImages);
   }
-  //   const allNewImages=allImages.filter((elm,index)=>index!=searchIndex);
-  //   setAllImages(allNewImages);
-  // }
-  // const images=allImages.filter((elm,index)=>index!==searchIndex);
-  // console.log(images);
   await deleteDoc(doc(db,albumName.name,imageId));
 
   setShowUpdate(false);
@@ -188,10 +177,10 @@ const deleteImage=async (searchIndex,allImageIndex,isSearch,imageId,albumName)=>
   console.log("setFullImage",showFullImage);
   setDeleteOn(true);
   setManage(false);
-  // setAllImages(images);
+
   
     toast.success("Image deleted successfully.");
-  // setAllImages()
+  
 }
 const renderAllAlbum=()=>{
   setShowAllAlbums(true);

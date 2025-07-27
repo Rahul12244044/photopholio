@@ -4,7 +4,6 @@ import addAlbumCssModule from "..//cssModules/addAlbum.module.css";
 
 const AddAlbum=({addAlbum,allAlbums})=>{
     const [albumName,setAlbumName]=useState("");
-    // let [totalName,setTotalName]=useState(0);
     const albumsName=(event)=>{
         console.log(event.target.value);
         setAlbumName(event.target.value);
@@ -13,21 +12,12 @@ const AddAlbum=({addAlbum,allAlbums})=>{
         event.preventDefault();
         console.log("formSubmit");
         console.log(allAlbums);
-        // const isAlbumFound=allAlbums.find((elm,index)=>);
-        // let totalName=0;
-        
-        // console.log("totalName");
-        // console.log(totalName);
-        // console.log("isAlbumsFound");
-        // console.log(isAlbumFound);
-        
         setAlbumName("");
 
     }
     
     return (
     <>
-    {/* <ToastContainer/> */}
     <div className={addAlbumCssModule.addAlbum}>
         <h1 className={addAlbumCssModule.createAlbumName}>Create an album</h1>
         <form onSubmit={formHandler} className={addAlbumCssModule.formToAddAlbum}>

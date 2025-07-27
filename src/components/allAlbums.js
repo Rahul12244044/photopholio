@@ -6,15 +6,7 @@ import {getDocs,collection,onSnapshot} from "firebase/firestore";
 import db from "../fireStore.js";
 const AllAlbums=({allAlbums,renderHideAddAlbum,renderOneAlbum,renderShowAddAlbum,showAddAlbum,setAllAlbums,addAlbum})=>{
     useEffect(()=>{
-        // const fetchAllAlbums=async ()=>{
-        //     const collectiionRef=collection(db,"albums");
-        //     const snapShots=await getDocs(collectiionRef);
-        //     console.log(snapShots);
-        //     const albums=snapShots.docs.map((elm)=>elm.data());
-        //     console.log(albums);
-        //     setAllAlbums(albums);
-        // }
-        // fetchAllAlbums();
+
         const uSub=onSnapshot(collection(db,"albums"),(snapShot)=>{
             const albums=snapShot.docs.map((elm)=>{
                 return {id:elm.id,...elm.data()}

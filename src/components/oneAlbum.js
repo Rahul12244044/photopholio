@@ -12,14 +12,6 @@ const OneAlbum=({backToAllAlbums,changeImageIndexNext,renderBack,albumName,rende
     const [searchImage,setSearchImage]=useState([]);
     const [isSearch,setIsSearch]=useState(false);
     useEffect(()=>{
-        // const fetchImages=async ()=>{
-        // const collectionRef=collection(db,albumName.name);
-        // const snapShots=await getDocs(collectionRef);
-        // const images=snapShots.docs.map((elm)=>elm.data());
-        // setAllImages(images);
-        // }
-        // fetchImages();
-        // Realtime update onSnapShot
         const unSub=onSnapshot(collection(db,albumName.name),(snapShot)=>{
             const images=snapShot.docs.map((elm)=>{
                 return {id:elm.id,...elm.data()};
@@ -52,20 +44,7 @@ const OneAlbum=({backToAllAlbums,changeImageIndexNext,renderBack,albumName,rende
 
     }
     }
-   
-    // console.log("allImages");
-    // console.log(allImages);
-    console.log("showFullImage");
-    console.log(showFullImage)
-    console.log("showUpdate");
-    console.log(showUpdate);
-    console.log("deleteOn");
-    console.log(deleteOn);
-    console.log("manage");
-    console.log(manage);
-    console.log("allImages");
-    console.log(allImages);
-    console.log("imageIndex",imageIndex);
+
     return (
         
     <>
@@ -104,8 +83,6 @@ const OneAlbum=({backToAllAlbums,changeImageIndexNext,renderBack,albumName,rende
     </div>
     <div className={oneAlbumCssModule.allImages}>
         {searchImages.length>=0 && isSearch?(searchImages.map((elm,index)=>{
-            console.log("isSearch");
-            console.log("ssssssssssssssssssssssssssssssssssssss");
             return (
             <>
             <div className={oneAlbumCssModule.oneImage}>
@@ -122,10 +99,6 @@ const OneAlbum=({backToAllAlbums,changeImageIndexNext,renderBack,albumName,rende
         </div>
             </>)
         })):allImages.map((elm,index)=>{
-            console.log("allImages");
-            console.log("allImages isSearch");
-            console.log(isSearch);
-            console.log("4444444444444444444444444444444");
             return (
             <>
             <div className={oneAlbumCssModule.oneImage}>
