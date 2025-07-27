@@ -1,0 +1,135 @@
+.albumListTop {
+  height: 60px;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 10px;
+}
+
+.albums {
+  font-size: 40px;
+  font-family: math;
+  margin: 0;
+}
+
+.cancelButton,
+.addAlbumsButton {
+  background-color: rgb(255 228 228);
+  color: red;
+  border: 2px solid red;
+  height: 31px;
+  font-size: 17px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-weight: 600;
+  padding: 0 10px;
+  margin-top: 10px;
+}
+
+.addAlbumsButton {
+  background-color: #E1F5FE;
+  color: #007aff;
+  border: 2px solid #007aff;
+}
+
+.allAlbums {
+  min-height: 300px;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 25px;
+  justify-content: center;
+}
+
+.oneAlbum {
+  height: 180px;
+  width: 200px;
+  border: 4px solid rgba(239, 237, 237, 0.79);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.albumImage {
+  height: 35%;
+  width: 35%;
+  margin-top: 40px;
+}
+
+.myFolderName {
+  height: 45px;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  padding-top: 10px;
+  font-size: 20px;
+  background-color: rgba(239, 237, 237, 0.79);
+  font-weight: 600;
+}
+
+.oneAlbum:hover {
+  border: 4px solid #007aff;
+  cursor: pointer;
+}
+
+.oneAlbum:hover .myFolderName {
+  background-color: #007aff;
+  color: white;
+}
+
+/*  Responsive Styles */
+@media (max-width: 768px) {
+  .albums {
+    font-size: 28px;
+  }
+
+  .oneAlbum {
+    width: 150px;
+    height: 160px;
+  }
+
+  .albumImage {
+    margin-top: 30px;
+    height: 30%;
+    width: 30%;
+  }
+
+  .myFolderName {
+    font-size: 16px;
+    height: 40px;
+  }
+
+  .cancelButton,
+  .addAlbumsButton {
+    font-size: 14px;
+    height: 28px;
+    padding: 0 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .albumListTop {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .oneAlbum {
+    width: 100%;
+    max-width: 90%;
+  }
+
+  .albums {
+    font-size: 24px;
+  }
+}

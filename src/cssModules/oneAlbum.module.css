@@ -1,0 +1,299 @@
+/* ========== COMMON ========== */
+.imageListTop {
+  height: auto;
+  width: 95%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  box-sizing: border-box;
+  padding: 10px 0;
+}
+
+.ContainBackAndName {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex: 1;
+  min-width: 200px;
+}
+
+.containBackImage {
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+  box-shadow: 0px 0px 1px 1px rgb(235, 235, 235);
+  cursor: pointer;
+}
+
+.backImage {
+  height: 60%;
+  width: 60%;
+  margin: 10px;
+}
+
+.albumNames {
+  font-family: math;
+  font-size: 20px;
+  flex: 1;
+  min-width: 100px;
+}
+
+/* ========== SEARCH + ADD ========== */
+.imageListSearch {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 10px;
+  flex: 2;
+  min-width: 250px;
+}
+
+.searchAlbum {
+  border: 1.5px solid rgb(118, 118, 118);
+  border-radius: 4px;
+  padding: 6px;
+  font-size: 16px;
+  width: 60%;
+  min-width: 100px;
+  max-width: 300px;
+}
+
+.searchAlbum:focus {
+  border: 1.5px solid #007aff;
+  outline: none;
+}
+
+.addImage,
+.cancelImages {
+  height: 36px;
+  background-color: #e1f5fe;
+  color: #007aff;
+  border: 2px solid #007aff;
+  font-weight: 600;
+  border-radius: 4px;
+  padding: 0 12px;
+  white-space: nowrap;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.cancelImages {
+  background-color: rgb(255 228 228);
+  color: red;
+  border: 2px solid red;
+}
+
+/* ========== IMAGE GRID ========== */
+.allImages {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin: 15px auto;
+  width: 95%;
+  box-sizing: border-box;
+  justify-content: center;
+}
+
+.oneImage {
+  width: 220px;
+  height: 160px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px 0 rgba(99, 99, 99, .2);
+  cursor: pointer;
+  position: relative;
+}
+
+/* ========== IMAGE DISPLAY ========== */
+.addImageAndName {
+  width: 100%;
+  height: 80%;
+  box-sizing: border-box;
+}
+
+.addImages {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px 5px 0 0;
+}
+
+.imageName {
+  padding: 0px 6px;
+  font-size: 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ========== ICONS ========== */
+.updateImage,
+.deleteImage {
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  top: 6px;
+  display: none;
+  cursor: pointer;
+}
+
+.updateImage {
+  right: 36px;
+}
+
+.deleteImage {
+  right: 6px;
+}
+
+.updateImages,
+.deleteImages {
+  height: 100%;
+  width: 100%;
+}
+
+.oneImage:hover .updateImage,
+.oneImage:hover .deleteImage {
+  display: block;
+}
+
+/* ========== FULL IMAGE VIEW ========== */
+.showFullImage {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, .5);
+  z-index: 999;
+  gap: 30px;
+}
+
+.fullImage {
+  height: 75%;
+  width: 90%;
+  max-width: 600px;
+}
+
+.fullImages {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.leftButton,
+.rightButton,
+.cancelButton {
+  height: 45px;
+  width: 45px;
+  font-size: 22px;
+  border-radius: 50%;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.leftButton:hover,
+.rightButton:hover {
+  background-color: #007aff;
+  color: white;
+}
+
+.cancelButton {
+  position: absolute;
+  top: 10%;
+  right: 5%;
+}
+
+.cancelButton:hover {
+  background-color: red;
+  color: white;
+}
+
+/* ========== MESSAGE ========== */
+.noImages {
+  text-align: center;
+  font-weight: 600;
+  font-family: sans-serif;
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* ========== RESPONSIVE BREAKPOINTS ========== */
+@media (max-width: 768px) {
+  .imageListTop {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .ContainBackAndName,
+  .imageListSearch {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .searchAlbum {
+    width: 100%;
+  }
+
+  .addImage,
+  .cancelImages {
+    width: 100%;
+    text-align: center;
+  }
+
+  .oneImage {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .albumNames {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .imageListSearch {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .addImage,
+  .cancelImages {
+    padding: 6px 8px;
+    font-size: 13px;
+  }
+
+  .oneImage {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .addImages {
+    height: auto;
+    max-height: 180px;
+  }
+
+  .fullImage {
+    width: 90%;
+    height: auto;
+  }
+}
+.cancelImage {
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+  object-fit: contain;
+}
+.imageListSearch {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* spacing between input and image */
+}
+

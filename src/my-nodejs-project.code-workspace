@@ -1,0 +1,54 @@
+{
+	"folders": [
+		{
+			"path": "../../../OneDrive/Pictures/hms2/my-nodejs-project"
+		},
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../irctc"
+		},
+		{
+			"name": "cn-irctc",
+			"path": "../../irctcgiyhub/cn-irctc"
+		},
+		{
+			"path": "../../busyBuy2"
+		},
+		{
+			"path": "../../qrCode"
+		},
+		{
+			"path": "../../movie-app"
+		},
+		{
+			"path": "../../chatApplication"
+		},
+		{
+			"path": "../../../OneDrive/Pictures/messageApplication"
+		},
+		{
+			"path": "../../chatApp"
+		},
+		{
+			"path": "../../irctcgiyhub"
+		},
+		{
+			"path": "../../reduxBusybuyE"
+		},
+		{
+			"path": "../../../OneDrive/Pictures/reduxbusybuy"
+		},
+		{
+			"path": "../../busybuy"
+		},
+		{
+			"path": "../../personal-portfolio"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "messageApplication",
+		"git.ignoreLimitWarning": true
+	}
+}

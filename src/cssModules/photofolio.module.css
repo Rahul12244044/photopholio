@@ -1,0 +1,97 @@
+.photofolio {
+    height: 80px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(90deg, #d16ba5, #86a8e7, #5ffbf1);
+    cursor: pointer;
+    padding: 0 10px;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.photofolioName {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.photoFolioImage {
+    height: 60px;
+}
+
+.albumList {
+    min-height: 400px;
+    width: 75%;
+    margin: 20px auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.Date {
+    position: absolute;
+    right: 2%;
+    top: 4.5%;
+    font-size: 20px;
+    font-weight: 600;
+    color: #060606cc;
+}
+
+/* ---------------- Responsive Styles ---------------- */
+@media (max-width: 768px) {
+    .photofolio {
+        flex-direction: row;
+        justify-content: space-between;
+        height: auto;
+        padding: 10px;
+    }
+
+    .photofolioName {
+        font-size: 20px;
+        margin: 0;
+    }
+
+    .photoFolioImage {
+        height: 40px;
+        margin: 0;
+    }
+
+    .albumList {
+        width: 90%;
+        margin-top: 10px;
+    }
+
+    .Date {
+        position: static;
+        text-align: center;
+        margin-top: 10px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .photofolio {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .photofolioName {
+        font-size: 18px;
+    }
+
+    .photoFolioImage {
+        height: 35px;
+    }
+
+    .Date {
+        font-size: 14px;
+        text-align: center;
+        width: 100%;
+    }
+}
+.headerContainer {
+  position: relative;
+  width: 100%;
+}
