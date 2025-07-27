@@ -37,7 +37,6 @@ const OneAlbum = ({
   setSearchImages,
 }) => {
   const [search, setSearch] = useState(false);
-  const [searchValue, setSearchValue] = useState("");
   const [searchImage, setSearchImage] = useState([]);
   const [isSearch, setIsSearch] = useState(false);
 
@@ -57,7 +56,6 @@ const OneAlbum = ({
 
   const searchImagess = (event) => {
     const title = event.target.value.toLowerCase().trim();
-    setSearchValue(title);
 
     if (title === "") {
       setSearchImage(allImages);
@@ -121,7 +119,7 @@ const OneAlbum = ({
                     ? searchImage[imageIndex]?.imageSrc
                     : allImages[imageIndex]?.imageSrc
                 }
-                alt="image"
+                alt="Full view"
               />
             </div>
             <button
@@ -174,7 +172,7 @@ const OneAlbum = ({
                     ? "https://mellow-seahorse-fc9268.netlify.app/assets/clear.png"
                     : "https://mellow-seahorse-fc9268.netlify.app/assets/search.png"
                 }
-                alt="Search toggle"
+                alt={search ? "Clear search" : "Open search"}
               />
             </div>
           )}
@@ -218,7 +216,7 @@ const OneAlbum = ({
                 <img
                   className={oneAlbumCssModule.updateImages}
                   src="https://mellow-seahorse-fc9268.netlify.app/assets/edit.png"
-                  alt="Update"
+                  alt="Edit"
                 />
               </div>
 
@@ -244,7 +242,9 @@ const OneAlbum = ({
                   src={elm.imageSrc}
                   alt={elm.title}
                 />
-                <span className={oneAlbumCssModule.imageName}>{elm.title}</span>
+                <span className={oneAlbumCssModule.imageName}>
+                  {elm.title}
+                </span>
               </div>
             </div>
           ))}
