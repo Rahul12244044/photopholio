@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import allAlbumsCssModule from "../cssModules/allAlbums.module.css";
 import AddAlbum from "./addAlbums.js";
-import { getDocs, collection, onSnapshot } from "firebase/firestore";
+import { collection, onSnapshot } from "firebase/firestore";
 import db from "../fireStore.js";
 
 const AllAlbums = ({
